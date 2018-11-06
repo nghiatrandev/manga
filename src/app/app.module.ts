@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+// import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module'
 
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -10,8 +13,9 @@ import { MangaNameListComponent } from './components/manga-name-list/manga-name-
 import { PopularMangaComponent } from './components/popular-manga/popular-manga.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MangaNavigationComponent } from './components/header/manga-nav/manga-nav.component';
-import { GetMangaListService } from './services/get-manga-list.service';
+import { GetMarketServices } from './services/get-market.service';
 import { ConfigService } from './services/config.service';
+import { MangaDetailComponent } from './components/manga-detail/manga-detail.component';
 
 
 @NgModule({
@@ -22,15 +26,18 @@ import { ConfigService } from './services/config.service';
     MangaNameListComponent,
     PopularMangaComponent,
     FooterComponent,
-    MangaNavigationComponent
+    MangaNavigationComponent,
+    MangaDetailComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AppRoutingModule, 
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ConfigService,
-    GetMangaListService
+    GetMarketServices,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,48 @@
+.song {
+    padding: 25px 17px;
+    box-shadow: 0px 0 2px ;
+
+}
+
+.col-md-8 h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.information-ul {
+    list-style: none;
+    margin-top: 13px;
+}
+
+.information-ul li {
+    font-size: 18px;
+    color: #626262;
+    line-height: 1.7em;
+}
+
+.information-ul li label {
+    padding-left: 10px;
+}
+
+.information-ul li span {
+    padding-left: 5px;
+}
+
+.manga-info {
+    margin: 1em 0 0 0;
+    padding-left: 0;
+    padding: 1em 1em;
+    box-shadow: 0px 0 2px #C1C1C1 
+}
+
+.table tr td :nth-child(1) {
+    width: 60%;
+}
+
+.table tr td :nth-child(2) {
+    width: 20%;
+}
+
+.table tr td :nth-child(3) {
+    width: 20%;
+}

@@ -1,0 +1,21 @@
+.w3-agileits-news-left {
+    margin-bottom: 25px;
+}
+
+li {
+    width: 100%;
+}
+
+.wthree-news-info ul li:nth-child(2) {
+    margin-left: 0;
+}
+
+.wthree-news-img img {
+    width: 108px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.wthree-news-info h5 {
+    cursor: pointer;
+}

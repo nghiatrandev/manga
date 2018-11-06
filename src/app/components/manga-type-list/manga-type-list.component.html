@@ -4,53 +4,11 @@
         </div>
         <div class="wthree-news-right-top">
             <div class="news-grids-bottom">
-                <!-- date -->
-                <div id="design" class="date">
-                    <div id="cycler">   
-                        <div class="date-text">
-                            <a href="news-single.html">August 15,2016</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">July 08,2016 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
-                            <p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">February 15,2016</a>
-                            <p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">January 15,2016 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
-                            <p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">September 24,2016</a>
-                            <p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">August 15,2016</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">July 08,2016 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
-                            <p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">February 15,2016</a>
-                            <p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">January 15,2016 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
-                            <p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
-                        </div>
-                        <div class="date-text">
-                            <a href="news-single.html">September 24,2016</a>
-                            <p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- //date -->
+                <ul>
+                    <li *ngFor="let categoryItem of categoriesData">
+                        <a href="###">{{ categoryItem.name }}</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

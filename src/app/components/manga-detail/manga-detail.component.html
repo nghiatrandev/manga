@@ -1,0 +1,67 @@
+
+  <div class="manga-info row" *ngIf="mangaDetailData">
+    <div class="col-md-4">
+      <img src="{{ mangaDetailData.cover }}" alt="" class="img-responsive" />
+    </div>
+    <div class="col-md-8">
+      <h3><strong>{{ mangaDetailData.name}}</strong></h3>	
+      <ul class="information-ul">
+        <li>
+          <i class="fa fa-user-circle-o"></i>
+          <label for="">Author(s) : </label>
+          <span>{{ mangaDetailData.author }}</span>
+        </li>
+        <li>
+          <i class="fa fa-user-circle-o"></i>
+          <label for="">Status : </label>
+          <span>{{ mangaDetailData.status }}</span>
+        </li>
+        <li>
+          <i class="fa fa-user-circle-o"></i>
+          <label for="">Last Updated : </label>
+          <span>{{ mangaDetailData.updated_date }}</span>
+        </li>
+        <li>
+          <i class="fa fa-user-circle-o"></i>
+          <label for="">Genres :  : </label>
+          <span>{{ mangaDetailData.tag_list }}</span>
+        </li>
+        <li>
+          <i class="fa fa-user-circle-o"></i>
+          <label for="">Description : </label>
+          <span>{{ mangaDetailData.description }}</span>
+        </li>
+    </ul>
+    </div>
+  </div>
+
+
+  <div class="manga-info">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>

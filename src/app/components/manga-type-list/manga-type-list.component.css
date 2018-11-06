@@ -1,0 +1,10 @@
+li {
+    float: left;
+    width: 50%;
+    list-style: none;
+}
+
+li a {
+    color: #ff9800;
+    font-size: 14px !important;
+}

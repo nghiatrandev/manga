@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { GetMangaListService } from 'src/app/services/get-manga-list.service';
+import { GetMarketServices } from 'src/app/services/get-market.service';
+import * as moment from 'moment';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'manga-name-list',
   templateUrl: './manga-name-list.component.html',
@@ -8,16 +11,25 @@ import { GetMangaListService } from 'src/app/services/get-manga-list.service';
 export class MangaNameListComponent implements OnInit {
 
   constructor(
-    private _getMangaListService: GetMangaListService,
+    private _getMangaListService: GetMarketServices,
+    private router: Router,
   ) { }
 
-  listManga = [1,1,1,1,1,1]
+  mangaData: any;
 
   ngOnInit() {
 
-    this._getMangaListService.getMarket().subscribe((data: any) => {
-      console.log(data)
+    this._getMangaListService.getMangaList().subscribe((data: any) => {
+        this.mangaData = data.entries;
+        for (let mangaItem of this.mangaData) {
+          mangaItem.lastUpdatedDate = moment(mangaItem.updated_date).format('DD/MM/YYYY');
+        }
     });
+  }
+
+
+  goToMangaDetail(id:number) {
+    this.router.navigate(['detail', id]); 
   }
 
 }
