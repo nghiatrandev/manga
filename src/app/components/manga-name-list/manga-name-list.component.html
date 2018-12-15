@@ -13,7 +13,7 @@
                 <img (click)="goToMangaDetail(mangaItem.id)" src="{{ mangaItem.cover }}" alt="" />
               </div>
               <div class="col-sm-7 wthree-news-info">
-                <h5>{{ mangaItem.name }}</h5>
+                <h5 (click)="goToMangaDetail(mangaItem.id)">{{ mangaItem.name }}</h5>
                 <ul>
                   <li><i class="fa fa-clock-o"></i> {{ mangaItem.lastUpdatedDate }}</li>
                   <li><i class="fa fa-eye" aria-hidden="true"></i> {{ mangaItem.chapters_count }}</li>
@@ -25,6 +25,15 @@
           </div>
         </div>
 
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item pointer"><a class="page-link " (click)="changePage('sub')" >Previous</a></li>
+            <li class="page-item pointer"><a class="page-link" disabled>......</a></li>
+            <li class="page-item pointer"><a class="page-link" (click)=" changePage('add')">Next</a></li>
+          </ul>
+        </nav>
+
       </div>
     </div>
   </div>
+  

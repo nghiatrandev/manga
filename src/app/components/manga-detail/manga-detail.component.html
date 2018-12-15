@@ -1,5 +1,5 @@
 
-  <div class="manga-info row" *ngIf="mangaDetailData">
+  <div class="manga-info row" *ngIf="mangaDetailData && !isOnChapterScreen">
     <div class="col-md-4">
       <img src="{{ mangaDetailData.cover }}" alt="" class="img-responsive" />
     </div>
@@ -36,32 +36,33 @@
   </div>
 
 
-  <div class="manga-info">
-    <table class="table">
+  <div class="manga-info" *ngIf="mangaDetailData && !isOnChapterScreen">
+
+    
+    <table class="table table-header">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Chapter name</th>
+          <th scope="col">Views</th>
+          <th scope="col">Timeuploaded</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
     </table>
+    <perfect-scrollbar  style="max-width: 722px; max-height: 400px;">
+        <table class="table table-content">
+            <tbody>
+              <tr class="table" *ngFor="let chapterItem of chapterList">
+                <td (click)="goToChapter(chapterItem.index)">{{ chapterItem.name }}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+        </table>
+    </perfect-scrollbar>
 
+  </div>
+
+  <div  *ngIf="isOnChapterScreen">
+    <!-- <h1 style="color:#fff">NGHIA</h1> -->
+    <chapter [mangaId]="mangaId" [chapter]="chapter"></chapter>
   </div>

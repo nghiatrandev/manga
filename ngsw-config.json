@@ -7,6 +7,7 @@
       "resources": {
         "files": [
           "/favicon.ico",
+          "/blogmangaicon.ico",
           "/index.html",
           "/*.css",
           "/*.js"

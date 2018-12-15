@@ -1,0 +1,31 @@
+.info-top-chapter {
+    color: #4c4c4c;
+    font: 12px/18px Tahoma,Geneva,sans-serif;
+    margin: 5px auto;
+    width: 980px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 0;
+    background: rgba(0,0,0,.39);
+}
+
+.info-top-chapter div {
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.info-top-chapter div select {
+    display: initial;
+    width: 20%;
+}
+
+.read-area {
+    text-align: center;
+}
+
+.select-chapter-selecter {
+    margin: 0 20px;
+    padding-top: 0;
+}
+

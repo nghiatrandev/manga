@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PopularMangaComponent } from './popular-manga.component';
+import { PopularMangaComponent } from '../popular-manga/popular-manga.component';
 
 describe('PopularMangaComponent', () => {
   let component: PopularMangaComponent;

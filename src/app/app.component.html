@@ -1,8 +1,8 @@
 <header></header>
 <manga-nav></manga-nav>
-<popular-manga></popular-manga>
+<!-- <popular-manga></popular-manga> -->
 
-<div class="faq">
+<div class="faq" [ngClass]="isOnChapterScreen ? 'faq black-background' : 'faq'">
     <div class="container">
         <div class="agileits-news-top">
             <ol class="breadcrumb">
@@ -12,15 +12,24 @@
         </div>
 
 
-        <div class="agileinfo-news-top-grids">
+        <div *ngIf="!isOnChapterScreen" class="agileinfo-news-top-grids">
             <div class="col-md-8 wthree-top-news-left">
                 <router-outlet></router-outlet>
             </div>
 
             <div class="col-md-4 wthree-news-right">
-                <manga-type-list></manga-type-list>
+                <div>
+                    <genne></genne>
+                </div>
             </div>
         </div>
+
+        <div *ngIf="isOnChapterScreen" class="agileinfo-news-top-grids">
+            <router-outlet></router-outlet>
+        </div>
+
+
+
     </div>
 </div>
 

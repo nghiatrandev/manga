@@ -1,4 +1,4 @@
-<div class="news-right-top">
+<div         class="news-right-top">
         <div class="wthree-news-right-heading">
             <h3>GENRES</h3>
         </div>
@@ -6,7 +6,7 @@
             <div class="news-grids-bottom">
                 <ul>
                     <li *ngFor="let categoryItem of categoriesData">
-                        <a href="###">{{ categoryItem.name }}</a>
+                        <span (click)="loadMangaFollowType(categoryItem.query)">{{ categoryItem.name }}</span>
                     </li>
                 </ul>
             </div>

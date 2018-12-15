@@ -1,0 +1,8 @@
+.w3ls_footer_grid_right a h2 {
+    /* background-image: url(./assets/images/naruto.pnj) no-repeat  */
+    background-image: url('/assets/images/goku.gif');
+}
+
+.w3ls_footer_grid_right a {
+    width: 30%;
+}

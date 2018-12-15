@@ -1,18 +1,18 @@
 <div class="header">
   <div class="container">
     <div class="w3layouts_logo">
-      <a href="#"><h1>One<span>Movies</span></h1></a>
+      <div class="pointer" (click)="goHome()"><h1>Manga<span>Blog</span></h1></div>
     </div>
     <div class="w3_search">
-      <form action="#" method="post">
-        <input type="text" name="Search" placeholder="Search" required="">
-        <input type="submit" value="Go">
-      </form>
+      <!-- <form (ngSubmit)="search()"> -->
+        <input type="text" name="Search" placeholder="Search" [(ngModel)]="keyWord" #searchInput (keyup.enter)="search()" >
+        <button class="findBtn" (click)="search()">SEARCH</button>
+      <!-- </form> -->
     </div>
     <div class="w3l_sign_in_register">
       <ul>
-        <li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 123 345 653</li>
-        <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> (+84) 366060899</li>
+        <!-- <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li> -->
       </ul>
     </div>
     <div class="clearfix"> </div>

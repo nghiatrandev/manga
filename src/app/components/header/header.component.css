@@ -1,0 +1,18 @@
+.findBtn {
+    outline: none;
+    border: none;
+    background: #212121;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    width: 22%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+	-webkit-transition: .5s ease-in;
+	-webkit-appearance: button;
+    cursor: pointer;
+}
+
+.findBtn:hover {
+    background: #FF8D1B;
+}

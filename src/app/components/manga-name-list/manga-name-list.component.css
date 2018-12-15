@@ -19,3 +19,12 @@ li {
 .wthree-news-info h5 {
     cursor: pointer;
 }
+
+.wthree-news-info h5:hover {
+    cursor: pointer;
+    color: #ff9800;
+}
+
+nav {
+    text-align: center;
+}

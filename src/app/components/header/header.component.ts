@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GetMarketServices } from 'src/app/services/get-market.service';
+import { Router } from '@angular/router';
+// import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'header',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  currentUrl = '';
+  keyWord: string = '';
 
-  ngOnInit() {
+  constructor(
+    private _getMangaListService: GetMarketServices,
+    private _router: Router
+  ) { }
+
+  ngOnInit() {}
+
+  search() {
+    this._getMangaListService.search(this.keyWord).subscribe((data: any)=>{
+        this._getMangaListService.setMangaList(data);
+    });
   }
+
+  goHome(){
+    this._router.navigate(['/']); 
+  }
+
 
 }
