@@ -25,8 +25,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR')
     this._displayServices.isOnChapterScreen$.subscribe((data:any) => {
+      console.log('1234567898765432')
       if (this.isOnChapterScreen != data) {
+        console.log('0000000000000000000000000000000000000000000000000000000000000000000000000000000')
           setTimeout(() => {
             this.isOnChapterScreen = data;
             console.log(this.isOnChapterScreen);

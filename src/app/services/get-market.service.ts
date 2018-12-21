@@ -16,6 +16,8 @@ export class GetMarketServices {
   totalChapterList$ = this.totalCHapterListSource.asObservable();
   mangaListSource = new Subject<any>();
   mangaList$ = this.mangaListSource.asObservable();
+  currentGenreSource = new Subject<any>();
+  currentGenre$ = this.currentGenreSource.asObservable();
 
   URL_MANGA_LIST = 'MangaList';
   URL_MANGA_DETAIL = 'MangaDetail';
@@ -71,6 +73,7 @@ export class GetMarketServices {
         
         
         getMangaDetail(id: number) {
+          console.log(id)
           let url = this._config.getBaseUrl() + this.URL_MANGA_DETAIL;
           let body = JSON.stringify({
             id : id
@@ -120,5 +123,9 @@ export class GetMarketServices {
 
         setMangaList(data: any) {
             this.mangaListSource.next(data);
+        }
+
+        setCurrentGenre(genre: string) {
+          this.currentGenreSource.next(genre);
         }
 }

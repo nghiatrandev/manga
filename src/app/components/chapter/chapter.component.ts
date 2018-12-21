@@ -26,7 +26,8 @@ export class ChapterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // console.log(this.totalChapterList)
+    console.log('QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ')
+    console.log(this.chapter)
     this._getMangaListService.totalChapterList$.subscribe((data: any) => {
       for (let i=1; i<=data; i++) {
         this.chapterList.push({
@@ -37,6 +38,14 @@ export class ChapterComponent implements OnInit {
     })
       this.getChapterData();
 
+  }
+
+  quickChangeChapter(type: string) {
+    if (type == 'add') {
+      this.chapter += 1;
+      console.log(this.chapter)
+      // this.chapter()
+    }
   }
 
   changeChapter(chapterValue) {

@@ -6,7 +6,7 @@
             <div class="news-grids-bottom">
                 <ul>
                     <li *ngFor="let categoryItem of categoriesData">
-                        <span (click)="loadMangaFollowType(categoryItem.query)">{{ categoryItem.name }}</span>
+                        <span (click)="changeGenre(categoryItem)">{{ categoryItem.name }}</span>
                     </li>
                 </ul>
             </div>

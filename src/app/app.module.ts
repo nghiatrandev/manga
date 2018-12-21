@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
-import { GenreComponent } from './components/genne/genre.component';
+import { GenreComponent } from './components/genre/genre.component';
 import { MangaNameListComponent } from './components/manga-name-list/manga-name-list.component';
 import { PopularMangaComponent } from './components/popular-manga/popular-manga.component';
 import { FooterComponent } from './components/footer/footer.component';

@@ -2,9 +2,10 @@
 
     <div class="info-top-chapter">
         <div><h2>{{ chapterData.name }}</h2></div>
+        <div><h2>{{ chapter }}</h2></div>
         <div>
             <button type="button" class="btn btn-success" (click)="changeChapter(chapter-1)">PREV CHAPTER</button>
-            <select class="form-control select-chapter-selecter" [value]="chapter" (change)="changeChapter($event.target.value)">
+            <select class="form-control select-chapter-selecter" [ngModel]="chapter" (change)="changeChapter($event.target.value)">
                 <option *ngFor="let optionItem of chapterList" value="{{optionItem.value}}" >{{optionItem.name}}</option>
             </select>
             <button type="button" class="btn btn-success" (click)="changeChapter(chapter+1)">NEXT CHAPTER</button>

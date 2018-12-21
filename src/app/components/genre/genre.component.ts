@@ -20,20 +20,13 @@ export class GenreComponent implements OnInit {
   categoriesData: any;
 
   ngOnInit() {
-    // this.isOnChapterScreen = this._displayServices.checkIsOnChapterScreen(this._router.url);
-    // console.log(this.isOnChapterScreen)
-    
-    // this._displayServices.isOnChapterScreen$.subscribe((data:any) => {
-    //   this.isOnChapterScreen = data;
-    //   console.log(this.isOnChapterScreen)
-    // })
-
     this._getMangaListService.getCategories().subscribe((data: any) => {
         this.categoriesData = data;
     });
   }
 
-  loadMangaFollowType(query: string) {
-    this._router.navigate(['home', query]); 
+  changeGenre(genre: any) {
+    console.log(genre)
+    this._getMangaListService.setCurrentGenre(genre);
   }
 }
